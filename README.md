@@ -69,7 +69,7 @@ Git和Markdown是必须学习的内容
     * 又简单又美观
     * __用Markdown写学习笔记__
         * 偷偷推荐一下自己的Blog: https://jasonblog.xyz/2020/01/12/2020/1-6/#toc-heading-1
-        * Markdown文件`1-6.md`也放在仓库下了
+        * [这篇笔记对应的Markdown文件](1-6.md)也放在仓库下了
         * 写法仅供参考，爱咋写咋写😄
     * Optional:
         * Markdown转换成pdf
@@ -99,24 +99,24 @@ Git和Markdown是必须学习的内容
 
 廖雪峰的python教程：https://www.liaoxuefeng.com/wiki/1016959663602400
 
-+ 数据类型
-+ 流程控制
-  + 条件判断
-  + 循环
-+ 函数
-+ 数据结构
-  + 列表
-  + 字典
-+ 异常处理
-+ 模块和包
-  + 以下三种`import`的区别：
-    + `import json`
-    + `from json import *`
-    + `from json import load`
-+ 类
-  + 类成员
-  + 类方法
-+ 装饰器（选学）
+- 数据类型
+- 流程控制
+  - 条件判断
+  - 循环
+- 函数
+- 数据结构
+  - 列表
+  - 字典
+- 异常处理
+- 模块和包
+  - 以下三种`import`的区别：
+    - `import json`
+    - `from json import *`
+    - `from json import load`
+- 类
+  - 类成员
+  - 类方法
+- 装饰器（选学）
 
 ### Django入门
 
@@ -145,7 +145,7 @@ Git和Markdown是必须学习的内容
 
 可能的解决方案：
 
-- 多看几封活动邮件试图找到它们的共同点，用`str.find()`或__正则表达式__匹配
+- 多看几封活动邮件试图找到它们的共同点，用`str.find()`或**正则表达式**匹配
   - 正则表达式学习：
     - https://deerchao.cn/tutorials/regex/regex.htm 理论
     - https://regex101.com/  交互式学习，强推
