@@ -1,12 +1,11 @@
 # 后端学习
 
-[TOC]
 
 ## 圣诞假期任务：
 
 1. **每周**在GitHub上写一周的学习笔记。
 2. 在圣诞假期结束前 (deadline: 1.10 24:00)，完成活动日历项目，具体要求如下：
-   1. 如这封活动邮件：**![image-20201218183521702](C:\Users\Jason\AppData\Roaming\Typora\typora-user-images\image-20201218183521702.png)**
+   1. 如这封活动邮件：![活动邮件示例](https://raw.githubusercontent.com/doutv/Picbed/master/img/README-2020-12-18-22-03-53)
    2. 实时接收并识别邮件内容。
    3. 提取活动主题、时间、地点、内容、讲者等信息。
       1. 至少需要提取时间和地点，而活动的其余信息可以以邮件原文的方式展示。
