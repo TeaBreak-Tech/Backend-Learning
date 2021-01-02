@@ -4,7 +4,7 @@
 ## 圣诞假期任务：
 
 1. **每周**在GitHub上写一周的学习笔记。
-2. 在圣诞假期结束前 (deadline: 1.10 24:00)，完成活动日历项目，具体要求如下：
+2. 在圣诞假期结束前 (deadline: 1.15 24:00)，完成活动日历项目，具体要求如下：
    1. 如这封活动邮件：![活动邮件示例](https://raw.githubusercontent.com/doutv/Picbed/master/img/README-2020-12-18-22-03-53)
    2. 实时接收并识别邮件内容。
    3. 提取活动主题、时间、地点、内容、讲者等信息。
@@ -145,6 +145,9 @@ Git和Markdown是必须学习的内容
 
 可能的解决方案：
 
+- Jupyter Notebook 帮助debug
+- `poplib`收取邮件并用`email`解析
+  - https://www.liaoxuefeng.com/wiki/1016959663602400/1017800447489504
 - 多看几封活动邮件试图找到它们的共同点，用`str.find()`或**正则表达式**匹配
   - 正则表达式学习：
     - https://deerchao.cn/tutorials/regex/regex.htm 理论
@@ -161,4 +164,3 @@ Git和Markdown是必须学习的内容
     * 如何实现免密登录服务器
 * 常用命令
     * 文件
-        * 
