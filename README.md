@@ -4,7 +4,7 @@
 ## 圣诞假期任务：
 
 1. **每周**在GitHub上写一周的学习笔记。
-2. 在圣诞假期结束前 (deadline: 1.15 24:00)，完成活动日历项目，具体要求如下：
+2. 在圣诞假期结束前 **deadline: 1.15 24:00**，完成活动日历项目，具体要求如下：
    1. 如这封活动邮件：![活动邮件示例](https://raw.githubusercontent.com/doutv/Picbed/master/img/README-2020-12-18-22-03-53)
    2. 实时接收并识别邮件内容。
    3. 提取活动主题、时间、地点、内容、讲者等信息。
@@ -143,17 +143,53 @@ Git和Markdown是必须学习的内容
 
 难点：自动识别某封邮件是否是活动邮件并提取关键信息
 
-可能的解决方案：
+- 按照 **[API文档](https://github.com/TeaBreak-Tech/Frontend-Learning/blob/main/Guidance/API-reference.md)** 定义接口
+  - 其中`location`地点信息不要求达成
+- 可能的解决方案：
+  - Jupyter Notebook 帮助debug
+  - `poplib` 收取邮件并用 `email` 解析
+    - https://www.liaoxuefeng.com/wiki/1016959663602400/1017800447489504
+  - 多看几封活动邮件试图找到它们的共同点，用 `str.find()` 或**正则表达式**匹配
+    - 正则表达式学习：
+      - https://deerchao.cn/tutorials/regex/regex.htm 理论
+      - https://regex101.com/  交互式学习，强推
+      - https://regexone.com/  几道练习题
+  - 机器学习：[腾讯AI开放平台分词](https://ai.qq.com/doc/nlpbase.shtml#1-%E6%8E%A5%E5%8F%A3%E6%8F%8F%E8%BF%B0)
 
-- Jupyter Notebook 帮助debug
-- `poplib`收取邮件并用`email`解析
-  - https://www.liaoxuefeng.com/wiki/1016959663602400/1017800447489504
-- 多看几封活动邮件试图找到它们的共同点，用`str.find()`或**正则表达式**匹配
-  - 正则表达式学习：
-    - https://deerchao.cn/tutorials/regex/regex.htm 理论
-    - https://regex101.com/  交互式学习，强推
-    - https://regexone.com/  几道练习题
-- 机器学习相关：自然语言处理NLP？
+- Django 中使用 MySQL 数据库:
+  - 在本地安装 MySQL
+  - 安装 MySQL Workbench 或其他数据库管理软件
+  - 在 Django 项目的 `models.py` 中定义数据库表
+    - 数据库表结构的设计是一大学问，现阶段只需要保证信息完整即可
+    - 可参考[问答墙的数据库设计](https://github.com/TeaBreak-Tech/ciwkbe/blob/master/qa/models.py)
+      - 主键 `primary_key` 是每一行数据的唯一标识
+      - 外键 `foreign_key` 连接两个表（现阶段不用考虑，活动日历建一个表即可）
+      - [Django ORM 常用字段类型](https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-types)
+        - `AutoField` 自增主键
+        - `CharField` 定长字符串
+        - `DateTimeField` 日期时间
+        - `PositiveIntegerField` 非负整数
+        - `TextField` 长字符串
+  - 在 Django 项目的 `settings.py` 中定义数据库连接：
+    - ```
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'OPTIONS': {
+                    "host": "127.0.0.1",                    # 本地的MySQL
+                    "port": 3306,
+                    "database": "database_name",            # 改成你的数据库名字
+                    "user": "your_database_username",       # 用户名
+                    "password": "your_database_password",   # 密码
+                },
+            }
+        }
+        ```
+  - `python manage.py make migrations xxx（项目名字）` 创建数据库迁移文件
+  - `python manage.py migrate` 数据库迁移
+  - 数据库增删查改的操作，请参考[QuerySet API](https://docs.djangoproject.com/zh-hans/3.1/ref/models/querysets/#queryset-api)及[问答墙的API](https://github.com/TeaBreak-Tech/ciwkbe/tree/master/qa/views)
+
+        
 
 ## Week 4 Linux
 
