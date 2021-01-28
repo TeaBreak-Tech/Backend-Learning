@@ -15,5 +15,7 @@
   - [ ] 端口开放
 - [ ] 后端
   - [ ] UserSystem 接口鉴权
-  - [ ] `settings.py`  读环境变量？
+  - [x] `settings.py`  读环境变量？
+  - [ ] secret cookie
+  - [ ] csrf
 
